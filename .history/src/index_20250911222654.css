@@ -1,0 +1,244 @@
+:root {
+  --light-blue-color: #E3F2FD;
+  --blue-color: #1976D2;
+  --beige-color: #FAFAFA;
+  --dark-blue-color: #0D47A1;
+  --white-color: #FFFFFF;
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-medium: rgba(0, 0, 0, 0.15);
+  --gradient-primary: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+  --gradient-secondary: linear-gradient(135deg, #1976D2 0%, #0D47A1 100%);
+}
+
+* {
+  font-family: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.App-header {
+  background: var(--gradient-primary);
+  min-height: 12vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px var(--shadow-light);
+  border-bottom: 1px solid rgba(25, 118, 210, 0.1);
+}
+
+.App-name {
+  font-size: 2.5rem;
+  color: var(--blue-color);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-shadow: 0 1px 2px var(--shadow-light);
+  margin: 0;
+}
+
+.App-main {
+  background: var(--beige-color);
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.App-main-content {
+  background: var(--white-color);
+  min-height: 10vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px var(--shadow-light);
+  margin: 1rem;
+  max-width: 1200px;
+}
+
+.Learn-more {
+  color: var(--blue-color);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.Learn-more:hover {
+  color: var(--dark-blue-color);
+  text-decoration: underline;
+}
+
+.App-main-content-text {
+  font-size: 1.1rem;
+  color: var(--dark-blue-color);
+  font-weight: 400;
+  text-align: center;
+  max-width: 600px;
+  line-height: 1.7;
+}
+
+.New-button {
+  background: var(--white-color);
+  color: var(--blue-color);
+  border: 2px solid var(--light-blue-color);
+  border-radius: 16px;
+  width: 200px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 1.25rem;
+  font-weight: 600;
+  box-shadow: 0 4px 12px var(--shadow-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.New-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.New-button:hover::before {
+  left: 100%;
+}
+
+.New-button:hover {
+  background: var(--gradient-secondary);
+  color: var(--white-color);
+  border-color: var(--blue-color);
+  box-shadow: 0 8px 25px var(--shadow-medium);
+  transform: translateY(-2px);
+}
+
+.App-content-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+}
+
+.Book-container {
+  width: 200px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  background: var(--white-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px var(--shadow-light);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.Book-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px var(--shadow-medium);
+}
+
+.Book-cover {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.Book-cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.Book-container:hover .Book-cover-image {
+  transform: scale(1.05);
+}
+
+.Book-author {
+  font-size: 0.875rem;
+  background: var(--white-color);
+  color: var(--dark-blue-color);
+  margin: 0;
+  width: 100%;
+  height: 60px;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.75rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.Info-container {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--light-blue-color);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.Info-link {
+  font-size: 0.875rem;
+  color: var(--blue-color);
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 12px 12px;
+}
+
+.Info-link:hover {
+  color: var(--dark-blue-color);
+  background: rgba(25, 118, 210, 0.1);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.App-footer {
+  background: var(--gradient-primary);
+  color: var(--dark-blue-color);
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 -2px 10px var(--shadow-light);
+  border-top: 1px solid rgba(25, 118, 210, 0.1);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
