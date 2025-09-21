@@ -180,7 +180,7 @@ body {
 }
 
 .book-price {
-  font-size: 16px;
+  font-size: 1rem;
   background: var(--white-color);
   color: var(--dark-blue-color);
   margin: 0;
@@ -207,7 +207,7 @@ body {
 }
 
 .info-link {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--blue-color);
   background-color: var(--light-blue-color);
   width: 100%;

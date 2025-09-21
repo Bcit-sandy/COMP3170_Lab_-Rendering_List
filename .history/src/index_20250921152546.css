@@ -207,7 +207,7 @@ body {
 }
 
 .info-link {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--blue-color);
   background-color: var(--light-blue-color);
   width: 100%;

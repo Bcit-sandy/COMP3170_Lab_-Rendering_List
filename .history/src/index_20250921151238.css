@@ -113,9 +113,8 @@ body {
 }
 
 .add-button-column {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  display: grid;
+  place-items: center start;
 }
 
 .books-grid {
@@ -146,9 +145,8 @@ body {
 .book-container {
   width: 200px;
   height: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-rows: 1fr auto auto;
   border: none;
   background: var(--white-color);
   border-radius: 12px;
@@ -164,7 +162,8 @@ body {
 .book-cover {
   width: 100%;
   height: 100%;
-  position: relative;
+  display: grid;
+  place-items: center;
   overflow: hidden;
 }
 
@@ -180,18 +179,17 @@ body {
 }
 
 .book-price {
-  font-size: 16px;
+  font-size: 0.875rem;
   background: var(--white-color);
   color: var(--dark-blue-color);
   margin: 0;
   width: 100%;
-  height: 10px;
-  font-weight: bold;
+  height: 60px;
+  font-weight: 600;
   text-align: center;
   padding: 0.75rem 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
   border-top: 1px solid var(--light-blue-color);
 }
 
@@ -199,15 +197,14 @@ body {
 .info-container {
   width: 100%;
   height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
   background: var(--light-blue-color);
   border-top: 1px solid var(--light-blue-color);
 }
 
 .info-link {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--blue-color);
   background-color: var(--light-blue-color);
   width: 100%;

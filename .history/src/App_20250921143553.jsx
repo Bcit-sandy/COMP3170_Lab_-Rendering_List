@@ -21,13 +21,13 @@ function App() {
         </div>
 
         <div className="app-content-container">
-          <div className="add-button-column">
+      
+            <Main>
             <Add />
+              {data.map(getBooks)}
+            </Main>
+
           </div>
-          <Main>
-            {data.map(getBooks)}
-          </Main>
-        </div>
       </main>
 
       <footer className="app-footer">

@@ -24,7 +24,7 @@ function App() {
           <div className="add-button-column">
             <Add />
           </div>
-          <Main>
+          <Main className="books-grid">
             {data.map(getBooks)}
           </Main>
         </div>
