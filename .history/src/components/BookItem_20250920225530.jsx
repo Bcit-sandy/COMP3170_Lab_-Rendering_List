@@ -1,6 +1,6 @@
 import Info from "./Info";
 
-function Book({data}) {
+function BookItem({ data }) {     
   return (
     <div className="book-container">
       <div className="book-cover">
@@ -8,8 +8,9 @@ function Book({data}) {
       </div>
 
       <p className="book-price">{data.price}</p>
-      <Info data={data} />
+      <Info info={data} />
     </div>
   );
 }
-export default Book;
+
+export default BookItem;

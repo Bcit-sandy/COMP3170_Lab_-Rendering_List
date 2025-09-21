@@ -8,7 +8,7 @@ function Book({data}) {
       </div>
 
       <p className="book-price">{data.price}</p>
-      <Info data={data} />
+      <Info info={data.url} />
     </div>
   );
 }

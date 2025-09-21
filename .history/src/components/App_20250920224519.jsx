@@ -1,7 +1,12 @@
 import Book from "./Book";
 import Add from "./Add";
+import data from "../data/books.json";
 
 function App() {
+  function getBooks(data) {
+    return <Book data={data} />
+  }
+
   return (
     <div>
       <header className="app-header">
@@ -16,17 +21,10 @@ function App() {
 
         <div className="app-content-container">
             <Add />
-            <Book 
-            cover="book1.png"
-            alt="Cloud Native DevOps with Kubernetes" 
-            author="by Justin Domingus, John Arundel"
-            info="https://itbook.store/books/9781098116828"/>
+            <Book>
+              {data.map(getBooks)}
+            </Book>
 
-            <Book 
-            cover="book2.png"
-            alt="NGINX Cookbook" 
-            author="by Derek DeJonghe" 
-            info="https://itbook.store/books/9781098126247"/>
           </div>
       </main>
 
