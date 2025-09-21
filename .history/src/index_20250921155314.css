@@ -37,8 +37,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   padding: 2rem 0;
+  gap: 2rem;
   flex-wrap: wrap;
 }
 
@@ -54,7 +54,6 @@ body {
   border-radius: 12px;
   margin: 1rem;
   max-width: 1000px;
-  flex-wrap: wrap;
 }
 
 .learn-more {
@@ -94,7 +93,8 @@ body {
   box-shadow: 0 4px 12px var(--shadow-light);
   position: relative;
   overflow: hidden;
-  
+  justify-self: start;
+  align-self: start;
 }
 
 .add-button:hover {
@@ -108,28 +108,26 @@ body {
   display: grid;
   grid-template-columns: 200px 1fr;
   gap: 2rem;
-  margin: 2rem auto;
+  margin: 2rem 0;
   width: 100%;
   max-width: 1200px;
   padding: 0 1rem;
   margin-bottom: 10vh;
   align-items: start;
   justify-items: start;
-  justify-content: center;
 }
 
 .add-button-column {
   grid-column: 1;
-  grid-row: 1/ -1;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .books-grid {
   grid-column: 2;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 2rem;
   width: 100%;
   align-items: start;
@@ -148,7 +146,7 @@ body {
   }
   
   .add-button-column {
-    grid-row: 1/ -1;
+    order: -1;
     margin-bottom: 2rem;
   }
   

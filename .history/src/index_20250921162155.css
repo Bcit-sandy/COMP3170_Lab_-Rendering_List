@@ -120,14 +120,13 @@ body {
 
 .add-button-column {
   grid-column: 1;
-  grid-row: 1/ -1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .books-grid {
-  grid-column: 2;
+  grid-column: 2 / -1;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 2rem;

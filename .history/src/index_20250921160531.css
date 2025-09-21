@@ -120,7 +120,6 @@ body {
 
 .add-button-column {
   grid-column: 1;
-  grid-row: 1/ -1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -129,11 +128,28 @@ body {
 .books-grid {
   grid-column: 2;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 2rem;
   width: 100%;
   align-items: start;
   justify-items: start;
+}
+
+/* Responsive design --- medium screens */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .app-content-container {
+    max-width: 900px;
+    gap: 1.5rem;
+  }
+  
+  .app-main-content {
+    max-width: 90%;
+  }
+  
+  .books-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.5rem;
+  }
 }
 
 /* Responsive design --- smaller screens */
@@ -148,7 +164,7 @@ body {
   }
   
   .add-button-column {
-    grid-row: 1/ -1;
+    order: -1;
     margin-bottom: 2rem;
   }
   

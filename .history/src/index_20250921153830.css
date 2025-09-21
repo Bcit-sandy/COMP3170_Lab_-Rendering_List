@@ -37,9 +37,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   padding: 2rem 0;
-  flex-wrap: wrap;
 }
 
 .app-main-content {
@@ -54,7 +52,6 @@ body {
   border-radius: 12px;
   margin: 1rem;
   max-width: 1000px;
-  flex-wrap: wrap;
 }
 
 .learn-more {
@@ -94,7 +91,6 @@ body {
   box-shadow: 0 4px 12px var(--shadow-light);
   position: relative;
   overflow: hidden;
-  
 }
 
 .add-button:hover {
@@ -108,28 +104,24 @@ body {
   display: grid;
   grid-template-columns: 200px 1fr;
   gap: 2rem;
-  margin: 2rem auto;
+  margin: 2rem 0;
   width: 100%;
   max-width: 1200px;
   padding: 0 1rem;
   margin-bottom: 10vh;
   align-items: start;
   justify-items: start;
-  justify-content: center;
 }
 
 .add-button-column {
-  grid-column: 1;
-  grid-row: 1/ -1;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .books-grid {
-  grid-column: 2;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 2rem;
   width: 100%;
   align-items: start;
@@ -138,23 +130,19 @@ body {
 
 /* Responsive design --- smaller screens */
 @media (max-width: 768px) {
-  .app-main-content {
-    width: 80%;
-  }
-  
   .app-content-container {
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
   
   .add-button-column {
-    grid-row: 1/ -1;
-    margin-bottom: 2rem;
+    order: -1;
+    margin-bottom: 1rem;
   }
   
   .books-grid {
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 2rem;
+    gap: 1rem;
   }
 }
 
